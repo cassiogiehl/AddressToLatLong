@@ -25,7 +25,7 @@ for i in range(0, len(df)):
     if not pd.isnull(df['Número Logradouro'][i]):
         local = "{}, {}, Rio Grande do Sul".format(df['Nome Logradouro'][i], df['Número Logradouro'][i])
 
-    location = geolocator.geocode(local, timeout=100)
+    location = geolocator.geocode(local, timeout=9999)
     print('\n')
     print(i)
     print(" - ")        
